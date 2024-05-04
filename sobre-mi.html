@@ -1,0 +1,330 @@
+<!--Portfolio con metodología BEM-->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+
+    <!--Estilos-->
+    <link
+      rel="stylesheet"
+      href="assests/fuentes/fonts/fontawesome-free-6.5.2-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assests/fuentes/fonts/poppins/poppins.css" />
+    <link rel="stylesheet" href="assests/css/reset.css" />
+    <link rel="stylesheet" href="assests/css/scroll.css" />
+    <link rel="stylesheet" href="assests/css/styles.css" />
+    <link rel="stylesheet" href="assests/css/responsive.css" />
+
+    <!--Script JS-->
+    <script src="assests/js/menu.js" defer></script>
+
+    <title>Portfolio - Andrés Martín - About</title>
+  </head>
+  <body>
+    <!--layout principal-->
+    <div class="layout">
+      <!--Barra lateral. Info del usuario-->
+      <aside class="layout__aside">
+        <section class="aside__user-info">
+          <!--información gral del usuario-->
+          <div class="user-info__general">
+            <div class="user-info__container-image">
+              <img
+                src="assests/img/HOJA.jpg"
+                alt="Fotografía de perfil"
+                class="user-info__image"
+              />
+            </div>
+            <h2 class="user-info__name">Andrés Martín</h2>
+            <h4 class="user-info__job">Especialista, desarrollador GIS</h4>
+          </div>
+          <!--Menu navegacion-->
+          <nav class="layout__menu">
+            <!--le pongo esa clase porque estaría dentro de la layout, aunque 
+            podría poner user-info__menu que tendría mas logica-->
+            <ul class="menu__list">
+              <li class="menu__option">
+                <a href="index.html" class="menu__link">
+                  <i class="menu__icon fas fa-home"></i>
+                  <span class="menu__overlay">Home</span>
+                </a>
+              </li>
+              <li class="menu__option">
+                <a href="sobre-mi.html" class="menu__link menu__link--active"
+                  ><!--el --active es para enlazarlo con los css 
+                  de modo que cuando este en esa pagina, el color azul que tengo definido en la barra lateral, se quede fijo,
+                de forma que lo puedo hacer tb en la pagina de inicio y asi en todas,
+              de esa manera cuando esté en cada respectiva página, su color se quedará fijo-->
+                  <i class="menu__icon fas fa-user"></i>
+                  <span class="menu__overlay">Sobre mi</span>
+                </a>
+              </li>
+              <li class="menu__option">
+                <a href="curriculum.html" class="menu__link">
+                  <i class="menu__icon fas fa-graduation-cap"></i>
+                  <span class="menu__overlay">Curriculum</span>
+                </a>
+              </li>
+              <li class="menu__option">
+                <a href="portafolio.html" class="menu__link">
+                  <i class="menu__icon fas fa-briefcase"></i>
+                  <span class="menu__overlay">Portfolio</span>
+                </a>
+              </li>
+
+              <li class="menu__option">
+                <a href="contacto.html" class="menu__link">
+                  <i class="menu__icon fas fa-envelope"></i>
+                  <span class="menu__overlay">Contacto</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!--links RRSS-->
+          <div class="user-info__links">
+            <ul class="links__social">
+              <li class="social__option">
+                <a
+                  href="https://www.youtube.com/channel/UCHFa9O6q8AdVr_pq63Mi7vQ"
+                  class="social__link"
+                  target="_blank"
+                >
+                  <i class="social__icon fa-brands fa-youtube"></i>
+                </a>
+              </li>
+
+              <li class="social__option">
+                <a
+                  href="https://www.linkedin.com/in/andresmartinrodriguez/"
+                  class="social__link"
+                  target="_blank"
+                >
+                  <i class="social__icon fa-brands fa-linkedin"></i>
+                </a>
+              </li>
+
+              <li class="social__option">
+                <a
+                  href="https://www.instagram.com/antarticka_/"
+                  class="social__link"
+                  target="_blank"
+                >
+                  <i class="social__icon fa-brands fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!--botón-->
+          <div class="user-info__buttons">
+            <a href="#" class="user-info__btn">Descargar CV</a>
+          </div>
+          <!--Footer. En este diseño, el footer va en el aside-->
+          <footer class="user-info__footer">
+            &copy; 2024 Andrés Martín Rodríguez
+          </footer>
+        </section>
+      </aside>
+
+      <!--Menu responsive. El toggle es un elemento que al darle clic aparece, y al volver a darle desaparece.
+      Esto en la vista de escritorio, no lo voy a mostrar, sólo lo mostraré en detdos media queries-->
+      <div class="layout__menu-toggle">
+        <i class="menu-toggle__icon fa-solid fa-bars"></i>
+        <i class="menu-toggle__icon fa-solid fa-xmark"></i>
+      </div>
+
+      <!--Contenido principal-->
+      <main class="layout__content">
+        <!--Este será el contenido que cambiará en cada página del sitioweb. -->
+        <section class="content__page content__about">
+          <header class="about__header">
+            <h2 class="about__title">
+              Sobre <span class="title__color">Mi</span>
+            </h2>
+          </header>
+          <section class="about__personal-info">
+            <article class="personal-info__bio">
+              <p class="personal-info__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                quos vero similique aliquid, impedit alias vitae autem error.
+                Veritatis consectetur tenetur ducimus iusto eius inventore
+                laboriosam. Eaque at deleniti vero. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Aut quos vero similique aliquid,
+                impedit alias vitae.
+              </p>
+            </article>
+            <div class="personal-info__data">
+              <ul class="personal-info__list">
+                <li class="personal-info__option">
+                  <span class="personal-info__title">Ciudad</span>
+                  <span class="personal-info__value">Madrid</span>
+                </li>
+                <li class="personal-info__option">
+                  <span class="personal-info__title">Dirección</span>
+                  <span class="personal-info__value"
+                    >La Morera, 2 - 28412 Madrid
+                  </span>
+                </li>
+                <li class="personal-info__option">
+                  <span class="personal-info__title">Correo</span>
+                  <span class="personal-info__value"
+                    >anmarro80@hotmail.com</span
+                  >
+                </li>
+                <li class="personal-info__option">
+                  <span class="personal-info__title">Teléfono</span>
+                  <span class="personal-info__value">655633676</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="about__services">
+            <header class="services__header">
+              <h3 class="services__title">
+                Lo que <span class="title__color">hago</span>
+              </h3>
+            </header>
+            <div class="services__container">
+              <article class="services__service">
+                <div class="service__icon">
+                  <i class="service__real-icon fa-solid fa-globe"></i>
+                </div>
+                <div class="service__content">
+                  <h4 class="service__title">Analista Desarrollador GIS</h4>
+                  <p class="service__description">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Excepturi nemo accusamus rem dolore optio. Pariatur
+                    corporis, magni exercitationem libero, debitis expedita
+                    numquam fugit earum ut alias ex animi eius cumque.
+                  </p>
+                </div>
+              </article>
+
+              <article class="services__service">
+                <div class="service__icon">
+                  <i class="service__real-icon fa-solid fa-computer"></i>
+                </div>
+                <div class="service__content">
+                  <h4 class="service__title">Desarrollo web</h4>
+                  <p class="service__description">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Excepturi nemo accusamus rem dolore optio. Pariatur
+                    corporis, magni exercitationem libero, debitis expedita
+                    numquam fugit earum ut alias ex animi eius cumque.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+          <section class="about__faq">
+            <header class="faq__header">
+              <h3 class="faq__title">
+                Preguntas <span class="title__color"> frecuentes</span>
+              </h3>
+            </header>
+            <div class="faq__container">
+              <div class="faq__card">
+                <div class="card__iner">
+                  <div class="card__front">
+                    <p class="faq__question">
+                      ¿Qué tecnologías uso en mi trabajo?
+                    </p>
+                  </div>
+                  <div class="card__back">
+                    <p class="faq__answer">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo sapiente impedit minus enim officia,
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__card">
+                <div class="card__iner">
+                  <div class="card__front">
+                    <p class="faq__question">
+                      ¿Cuáles son mis motivaciones como desarrollador?
+                    </p>
+                  </div>
+                  <div class="card__back">
+                    <p class="faq__answer">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo sapiente impedit minus enim officia,
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__card">
+                <div class="card__iner">
+                  <div class="card__front">
+                    <p class="faq__question">
+                      ¿Qué es lo que más me apasiona del mundo GIS?
+                    </p>
+                  </div>
+                  <div class="card__back">
+                    <p class="faq__answer">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo sapiente impedit minus enim officia,
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__card">
+                <div class="card__iner">
+                  <div class="card__front">
+                    <p class="faq__question">
+                      ¿Cuál es mi filosofía de trabajo?
+                    </p>
+                  </div>
+                  <div class="card__back">
+                    <p class="faq__answer">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo sapiente impedit minus enim officia,
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__card">
+                <div class="card__iner">
+                  <div class="card__front">
+                    <p class="faq__question">
+                      ¿Qué oportunidades de desarrollo profesional busco
+                      actualmente?
+                    </p>
+                  </div>
+                  <div class="card__back">
+                    <p class="faq__answer">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo sapiente impedit minus enim officia,
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__card">
+                <div class="card__iner">
+                  <div class="card__front">
+                    <p class="faq__question">
+                      ¿Cuáles son mis fuentes de inspiración?
+                    </p>
+                  </div>
+                  <div class="card__back">
+                    <p class="faq__answer">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo sapiente impedit minus enim officia,
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

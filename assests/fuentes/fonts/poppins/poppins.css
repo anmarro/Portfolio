@@ -1,0 +1,8 @@
+/*con este comando puedo cargar en mi equipo una
+nueva fuente más allá de las que vienen ya en el equipo*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}

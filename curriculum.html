@@ -1,0 +1,357 @@
+<!--Portfolio con metodología BEM-->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+
+    <!--Estilos-->
+    <link
+      rel="stylesheet"
+      href="assests/fuentes/fonts/fontawesome-free-6.5.2-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assests/fuentes/fonts/poppins/poppins.css" />
+    <link rel="stylesheet" href="assests/css/reset.css" />
+    <link rel="stylesheet" href="assests/css/scroll.css" />
+    <link rel="stylesheet" href="assests/css/styles.css" />
+    <link rel="stylesheet" href="assests/css/responsive.css" />
+
+    <!--Script JS-->
+    <script src="assests/js/menu.js" defer></script>
+
+    <title>Portfolio - Andrés Martín - CV</title>
+  </head>
+  <body>
+    <!--layout principal-->
+    <div class="layout">
+      <!--Barra lateral. Info del usuario-->
+      <aside class="layout__aside">
+        <section class="aside__user-info">
+          <!--información gral del usuario-->
+          <div class="user-info__general">
+            <div class="user-info__container-image">
+              <img
+                src="assests/img/HOJA.jpg"
+                alt="Fotografía de perfil"
+                class="user-info__image"
+              />
+            </div>
+            <h2 class="user-info__name">Andrés Martín</h2>
+            <h4 class="user-info__job">Especialista, desarrollador GIS</h4>
+          </div>
+          <!--Menu navegacion-->
+          <nav class="layout__menu">
+            <!--le pongo esa clase porque estaría dentro de la layout, aunque 
+            podría poner user-info__menu que tendría mas logica-->
+            <ul class="menu__list">
+              <li class="menu__option">
+                <a href="index.html" class="menu__link">
+                  <i class="menu__icon fas fa-home"></i>
+                  <span class="menu__overlay">Home</span>
+                </a>
+              </li>
+              <li class="menu__option">
+                <a href="sobre-mi.html" class="menu__link"
+                  ><!--el --active es para enlazarlo con los css 
+                  de modo que cuando este en esa pagina, el color azul que tengo definido en la barra lateral, se quede fijo,
+                de forma que lo puedo hacer tb en la pagina de inicio y asi en todas,
+              de esa manera cuando esté en cada respectiva página, su color se quedará fijo-->
+                  <i class="menu__icon fas fa-user"></i>
+                  <span class="menu__overlay">Sobre mi</span>
+                </a>
+              </li>
+              <li class="menu__option">
+                <a href="curriculum.html" class="menu__link menu__link--active">
+                  <i class="menu__icon fas fa-graduation-cap"></i>
+                  <span class="menu__overlay">Curriculum</span>
+                </a>
+              </li>
+              <li class="menu__option">
+                <a href="portafolio.html" class="menu__link">
+                  <i class="menu__icon fas fa-briefcase"></i>
+                  <span class="menu__overlay">Portfolio</span>
+                </a>
+              </li>
+
+              <li class="menu__option">
+                <a href="contacto.html" class="menu__link">
+                  <i class="menu__icon fas fa-envelope"></i>
+                  <span class="menu__overlay">Contacto</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!--links RRSS-->
+          <div class="user-info__links">
+            <ul class="links__social">
+              <li class="social__option">
+                <a
+                  href="https://www.youtube.com/channel/UCHFa9O6q8AdVr_pq63Mi7vQ"
+                  class="social__link"
+                  target="_blank"
+                >
+                  <i class="social__icon fa-brands fa-youtube"></i>
+                </a>
+              </li>
+
+              <li class="social__option">
+                <a
+                  href="https://www.linkedin.com/in/andresmartinrodriguez/"
+                  class="social__link"
+                  target="_blank"
+                >
+                  <i class="social__icon fa-brands fa-linkedin"></i>
+                </a>
+              </li>
+
+              <li class="social__option">
+                <a
+                  href="https://www.instagram.com/antarticka_/"
+                  class="social__link"
+                  target="_blank"
+                >
+                  <i class="social__icon fa-brands fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!--botón-->
+          <div class="user-info__buttons">
+            <a href="#" class="user-info__btn">Descargar CV</a>
+          </div>
+          <!--Footer. En este diseño, el footer va en el aside-->
+          <footer class="user-info__footer">
+            &copy; 2024 Andrés Martín Rodríguez
+          </footer>
+        </section>
+      </aside>
+
+      <!--Menu responsive. El toggle es un elemento que al darle clic aparece, y al volver a darle desaparece.
+      Esto en la vista de escritorio, no lo voy a mostrar, sólo lo mostraré en detdos media queries-->
+      <div class="layout__menu-toggle">
+        <i class="menu-toggle__icon fa-solid fa-bars"></i>
+        <i class="menu-toggle__icon fa-solid fa-xmark"></i>
+      </div>
+
+      <!--Contenido principal-->
+      <main class="layout__content">
+        <!--Este será el contenido que cambiará en cada página del sitioweb. -->
+        <section class="content__page content__resume">
+          <header class="resume__header">
+            <h2 class="resume__title">Curriculum</h2>
+          </header>
+
+          <div class="resume__container">
+            <section class="resume__left">
+              <header class="resume__subheader">
+                <h3 class="resume__subtitle">Formación</h3>
+              </header>
+
+              <div class="resume__timelines">
+                <article class="timelines__timeline">
+                  <header class="timeline__header">
+                    <h4 class="timeline__year">2024</h4>
+                    <span class="timeline__company">ESRI España</span>
+                  </header>
+                  <div class="timeline__divider"></div>
+                  <div class="timeline__description">
+                    <h3 class="timeline__title">Especialista GIS</h3>
+                    <p class="timeline__text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nulla eum ullam illum nihil ducimus delectus sequi
+                    </p>
+                  </div>
+                </article>
+
+                <article class="timelines__timeline">
+                  <header class="timeline__header">
+                    <h4 class="timeline__year">2020</h4>
+                    <span class="timeline__company">ESRI España</span>
+                  </header>
+                  <div class="timeline__divider"></div>
+                  <div class="timeline__description">
+                    <h3 class="timeline__title">Desarrollo GIS</h3>
+                    <p class="timeline__text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nulla eum ullam illum nihil ducimus delectus sequi
+                    </p>
+                  </div>
+                </article>
+
+                <article class="timelines__timeline">
+                  <header class="timeline__header">
+                    <h4 class="timeline__year">2011</h4>
+                    <span class="timeline__company">UCM</span>
+                  </header>
+                  <div class="timeline__divider"></div>
+                  <div class="timeline__description">
+                    <h3 class="timeline__title">Desarrollo GIS</h3>
+                    <p class="timeline__text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nulla eum ullam illum nihil ducimus delectus sequi
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <header class="resume__subheader">
+                <h3 class="resume__subtitle">Experiencia</h3>
+              </header>
+
+              <div class="resume__timelines">
+                <article class="timelines__timeline">
+                  <header class="timeline__header">
+                    <h4 class="timeline__year">2016-2020</h4>
+                    <span class="timeline__company">INECO</span>
+                  </header>
+                  <div class="timeline__divider"></div>
+                  <div class="timeline__description">
+                    <h3 class="timeline__title">Técnico GIS</h3>
+                    <p class="timeline__text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nulla eum ullam illum nihil ducimus delectus sequi
+                    </p>
+                  </div>
+                </article>
+
+                <article class="timelines__timeline">
+                  <header class="timeline__header">
+                    <h4 class="timeline__year">2020-2022</h4>
+                    <span class="timeline__company">ANTARTIKA</span>
+                  </header>
+                  <div class="timeline__divider"></div>
+                  <div class="timeline__description">
+                    <h3 class="timeline__title">Técnico GIS</h3>
+                    <p class="timeline__text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nulla eum ullam illum nihil ducimus delectus sequi
+                    </p>
+                  </div>
+                </article>
+
+                <article class="timelines__timeline">
+                  <header class="timeline__header">
+                    <h4 class="timeline__year">2010-2012</h4>
+                    <span class="timeline__company">PROINTEC</span>
+                  </header>
+                  <div class="timeline__divider"></div>
+                  <div class="timeline__description">
+                    <h3 class="timeline__title">Técnico GIS</h3>
+                    <p class="timeline__text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nulla eum ullam illum nihil ducimus delectus sequi
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="resume__right">
+              <header class="resume__subheader">
+                <h3 class="resume__subtitle">
+                  Habilidades <span class="subtitle__color">GIS</span>
+                </h3>
+              </header>
+
+              <div class="resume__skills">
+                <article class="skills__title">
+                  <h4 class="skills__text">Técnico GIS</h4>
+                  <span class="skills__number">90%</span>
+                </article>
+                <div class="skills__progressbar">
+                  <div class="skills__percentage skills__percentage--p1"></div>
+                  <!--incluyo modificadores a las barras de progreso para poder adaptar las barras en funcion del porcentaje-->
+                </div>
+
+                <article class="skills__title">
+                  <h4 class="skills__text">Analista GIS</h4>
+                  <span class="skills__number">50%</span>
+                </article>
+                <div class="skills__progressbar">
+                  <div class="skills__percentage skills__percentage--p2"></div>
+                </div>
+
+                <article class="skills__title">
+                  <h4 class="skills__text">Programación GIS</h4>
+                  <span class="skills__number">60%</span>
+                </article>
+                <div class="skills__progressbar">
+                  <div class="skills__percentage skills__percentage--p3"></div>
+                </div>
+
+                <article class="skills__title">
+                  <h4 class="skills__text">Desarrollo Apps GIS</h4>
+                  <span class="skills__number">60%</span>
+                </article>
+                <div class="skills__progressbar">
+                  <div class="skills__percentage skills__percentage--p4"></div>
+                </div>
+              </div>
+              <header class="resume__subheader">
+                <h3 class="resume__subtitle">
+                  Habilidades de <span class="subtitle__color">código</span>
+                </h3>
+              </header>
+
+              <div class="resume__skills">
+                <article class="skills__title">
+                  <h4 class="skills__text">Python / ArcPy</h4>
+                  <span class="skills__number">60%</span>
+                </article>
+                <div class="skills__progressbar">
+                  <div class="skills__percentage skills__percentage--p5"></div>
+                </div>
+
+                <article class="skills__title">
+                  <h4 class="skills__text">Javascript / SDK ESRI</h4>
+                  <span class="skills__number">60%</span>
+                </article>
+                <div class="skills__progressbar">
+                  <div class="skills__percentage skills__percentage--p6"></div>
+                </div>
+
+                <article class="skills__title">
+                  <h4 class="skills__text">Desarrollo web. HTML / CSS</h4>
+                  <span class="skills__number">80%</span>
+                </article>
+                <div class="skills__progressbar">
+                  <div class="skills__percentage skills__percentage--p7"></div>
+                </div>
+
+                <article class="skills__title">
+                  <h4 class="skills__text">Desarrollo web. Javascript</h4>
+                  <span class="skills__number">40%</span>
+                </article>
+                <div class="skills__progressbar">
+                  <div class="skills__percentage skills__percentage--p8"></div>
+                </div>
+              </div>
+
+              <header class="resume__subheader">
+                <h3 class="resume__subtitle">
+                  Áreas de <span class="subtitle__color">conocimiento</span>
+                </h3>
+              </header>
+
+              <div class="resume__knowledges">
+                <ul class="knowledges__list">
+                  <li class="knowledges__option">
+                    Sistemas de Información Geográfica
+                  </li>
+                  <li class="knowledges__option">Programación</li>
+                  <li class="knowledges__option">Desarrollo web</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

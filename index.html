@@ -1,0 +1,146 @@
+<!--Portfolio con metodología BEM-->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /><!--El maximum scale = 1 es para que el usuario no pueda hacer zoom en la pagina
+       y no se me descuadre nada en temas responsive-->
+
+    <!--Estilos-->
+    <link
+      rel="stylesheet"
+      href="assests/fuentes/fonts/fontawesome-free-6.5.2-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assests/fuentes/fonts/poppins/poppins.css" />
+    <link rel="stylesheet" href="assests/css/reset.css" />
+    <link rel="stylesheet" href="assests/css/scroll.css" />
+    <link rel="stylesheet" href="assests/css/styles.css" />
+    <link rel="stylesheet" href="assests/css/responsive.css"/>
+
+  <!--Script JS-->
+  <script src="assests/js/menu.js" defer></script>
+
+
+    <title>Portfolio - Andrés Martín - Inicio</title>
+  </head>
+  <body>
+    <!--layout principal-->
+    <div class="layout">
+      <!--Barra lateral. Info del usuario-->
+      <aside class="layout__aside">
+        <section class="aside__user-info">
+          <!--información gral del usuario-->
+          <div class="user-info__general">
+            <div class="user-info__container-image">
+              <img
+                src="assests/img/HOJA.jpg"
+                alt="Fotografía de perfil"
+                class="user-info__image"
+              />
+            </div>
+            <h2 class="user-info__name">Andrés Martín</h2>
+            <h4 class="user-info__job">Especialista, desarrollador GIS</h4>
+          </div>
+          <!--Menu navegacion-->
+          <nav class="layout__menu">
+            <!--le pongo esa clase porque estaría dentro de la layout, aunque 
+            podría poner user-info__menu que tendría mas logica-->
+            <ul class="menu__list">
+              <li class="menu__option">
+                <a href="index.html" class="menu__link menu__link--active">
+                  <i class="menu__icon fas fa-home"></i>
+                  <span class="menu__overlay">Home</span>
+                </a>
+              </li>
+              <li class="menu__option">
+                <a href="sobre-mi.html" class="menu__link">
+                  <i class="menu__icon fas fa-user"></i>
+                  <span class="menu__overlay">Sobre mi</span>
+                </a>
+              </li>
+              <li class="menu__option">
+                <a href="curriculum.html" class="menu__link">
+                  <i class="menu__icon fas fa-graduation-cap"></i>
+                  <span class="menu__overlay">Curriculum</span>
+                </a>
+              </li>
+              <li class="menu__option">
+                <a href="portafolio.html" class="menu__link">
+                  <i class="menu__icon fas fa-briefcase"></i>
+                  <span class="menu__overlay">Portfolio</span>
+                </a>
+              </li>
+
+              <li class="menu__option">
+                <a href="contacto.html" class="menu__link">
+                  <i class="menu__icon fas fa-envelope"></i>
+                  <span class="menu__overlay">Contacto</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!--links RRSS-->
+          <div class="user-info__links">
+            <ul class="links__social">
+              <li class="social__option">
+                <a
+                  href="https://www.youtube.com/channel/UCHFa9O6q8AdVr_pq63Mi7vQ"
+                  class="social__link"
+                  target="_blank"
+                >
+                  <i class="social__icon fa-brands fa-youtube"></i>
+                </a>
+              </li>
+
+              <li class="social__option">
+                <a
+                  href="https://www.linkedin.com/in/andresmartinrodriguez/"
+                  class="social__link"
+                  target="_blank"
+                >
+                  <i class="social__icon fa-brands fa-linkedin"></i>
+                </a>
+              </li>
+
+              <li class="social__option">
+                <a
+                  href="https://www.instagram.com/antarticka_/"
+                  class="social__link"
+                  target="_blank"
+                >
+                  <i class="social__icon fa-brands fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!--botón-->
+          <div class="user-info__buttons">
+            <a href="#" class="user-info__btn">Descargar CV</a>
+          </div>
+          <!--Footer. En este diseño, el footer va en el aside-->
+          <footer class="user-info__footer">
+            &copy; 2024 Andrés Martín Rodríguez
+          </footer>
+        </section>
+      </aside>
+
+      <!--Menu responsive. El toggle es un elemento que al darle clic aparece, y al volver a darle desaparece.
+      Esto en la vista de escritorio, no lo voy a mostrar, sólo lo mostraré en detdos media queries-->
+      <div class="layout__menu-toggle">
+        <i class="menu-toggle__icon fa-solid fa-bars"></i>
+        <i class="menu-toggle__icon fa-solid fa-xmark"></i>
+      </div>
+
+      <!--Contenido principal-->
+      <main class="layout__content">
+        <section class="content__page">
+          <h1 class="page__name">Andrés Martín</h1>
+          <h2 class="page__job">Analista Desarrollador GIS/WEB.</h2>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
